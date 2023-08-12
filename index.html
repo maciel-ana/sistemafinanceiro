@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema Financeiro</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css">
+</head>
+<body>
+    <div class="main-and-calendar">
+    <main>
+        <!-- Resumo -->
+        <div class="resume">
+            <!-- Entradas -->
+            <div>
+                Entradas: R$
+                <span class="incomes">0.00</span>
+            </div>
+
+            <!-- Saídas -->
+            <div>
+                Saídas: R$
+                <span class="expenses">0.00</span>
+            </div>
+
+            <!-- Total -->
+            <div>
+                Total: R$
+                <span class="total">0.00</span>
+            </div>
+        </div>
+
+        <!-- Novo item -->
+        <div class="newItem">
+
+            <!-- Descrição do Item -->
+            <div class="divDesc">
+                <label for="desc">Descrição</label>
+                <input type="text" id="desc">
+            </div>
+
+            <!-- Montante -->
+            <div class="divAmount">
+                <label for="amount">Valor</label>
+                <input type="number" id="amount">
+            </div>
+
+            <!-- Tipo -->
+            <div class="divType">
+                <label for="type">Tipo</label>
+                <select id="type">
+                    <option>Entrada</option>
+                    <option>Saída</option>
+                </select>
+            </div>
+
+            <!-- Botão Novo -->
+            <button id="btnNew">Incluir</button>
+        </div>
+
+        <!-- Tabela -->
+        <div class="divTable">
+            <table>
+                <thead>
+                    <tr>
+                    <th>Descrição</th>
+                    <th class="columnAmount">Valor</th>
+                    <th class="columnType">Tipo</th>
+                    <th class="columnAction"></th>
+                </tr> 
+                </thead>
+                <tbody> 
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <div class="calendar">
+        <div class="calendar-header">
+          <button id="prevMonth">&#10094;</button>
+          <h2 id="monthYear"></h2>
+          <button id="nextMonth">&#10095;</button>
+        </div>
+        <div class="calendar-days">
+          <div class="day">Dom</div>
+          <div class="day">Seg</div>
+          <div class="day">Ter</div>
+          <div class="day">Qua</div>
+          <div class="day">Qui</div>
+          <div class="day">Sex</div>
+          <div class="day">Sáb</div>
+        </div>
+        <div class="calendar-grid" id="calendarGrid"></div>
+      </div>
+    </div>
+      <div class="transaction-form">
+        <h3>Adicionar Transação</h3>
+        <div>
+          <label for="transactionDescription">Descrição:</label>
+          <input type="text" id="transactionDescription">
+        </div>
+        <div>
+          <label for="transactionAmount">Valor:</label>
+          <input type="number" id="transactionAmount">
+        </div>
+        <div>
+          <label for="transactionType">Tipo:</label>
+          <select id="transactionType">
+            <option value="income">Entrada</option>
+            <option value="expense">Saída</option>
+          </select>
+        </div>
+        <button id="addTransaction">Adicionar Transação</button>
+      </div>
+      <div class="selected-date">
+        <h3>Data Selecionada:</h3>
+        <p id="selectedDate"></p>
+      </div>
+      <div class="transactions-list">
+        <h3>Transações do Dia</h3>
+        <ul id="transactionsList"></ul>
+      </div>
+    <script src="script.js"></script>
+</body>
+</html>

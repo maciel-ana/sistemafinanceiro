@@ -1,0 +1,366 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+
+:root{
+    --color-white:#F2F2F2;
+    --color-azulclaro:#E0E9F0;
+    --color-azul:#8F9DA6;
+    --color-azulescurinho:#71838F;
+    --color-cinza:#C4D1D9;
+    --color-black:#000000;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    outline: none;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    background-color: var(--color-white);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+main {
+    max-width: 550px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--color-azulclaro);
+    border-radius: 1em;
+    box-shadow: 2px 3px 7px #ccc;
+    margin-top: 20em;
+    margin-left: 2em;
+}
+
+.resume {
+    display: flex;
+    padding: 10px;
+    gap: 40px;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    height: 100px;
+}
+
+.resume > div {
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 0px 5px var(--color-azulescurinho);
+    border-radius: 10px;
+    padding: 15px;
+    width: 150px;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    font-weight: bolder;
+}
+
+.resume > div span{
+    font-family: 'Poppins', sans-serif;
+}
+
+.newItem {
+    display: flex;
+    gap: 10px;
+    align-items: end;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 2em;
+}
+
+.divDesc, .divType, .divAmount {
+    display: flex;
+    flex-direction: column;
+}
+
+.newItem > button {
+    background-color: #2C73D2;
+    color: white;
+    border: none;
+    padding: 0 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    height: 34px;
+}
+
+input, select {
+    padding: 5px;
+}
+
+.divTable {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+table {
+    width: 98%;
+    padding: 20px 0;
+    border-radius: 5px;
+}
+
+th {
+    text-align: start;
+    border-bottom: inset;
+    padding-bottom: 5px;
+}
+
+i {
+    font-size: 25px;
+}
+
+.bxs-chevron-up-circle {
+    color: #00C9A7;
+}
+
+.bxs-chevron-down-circle {
+    color: #D83121;
+}
+
+.columnAction {
+    width: 40px;
+    text-align: center;
+}
+
+.columnAction > button {
+    background: transparent;
+    border: none;
+}
+
+.columnAmount {
+    width: 30%;
+}
+
+.columnType {
+    width: 80px;
+    text-align: center;
+    
+}
+
+.divDesc label,
+.divAmount label,
+.divType label{
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+.divDesc input,
+.divAmount input,
+.divType select{
+    border-radius: 2em;
+    background-color: var(--color-azul);
+    color: var(--color-white);
+    border: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+.divType select:hover{
+    background-color: var(--color-cinza);
+}
+
+.divType option{
+    font-family: 'Poppins', sans-serif;
+}
+
+button {
+    font-family: inherit;
+    font-size: 18px;
+    background: linear-gradient(to bottom, #4dc7d9 0%,#66a6ff 100%);
+    color: white;
+    padding: 0.8em 1.2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 25px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s;
+}
+  
+button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+}
+  
+button:active {
+    transform: scale(0.95);
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+  
+button span {
+    display: block;
+    margin-left: 0.4em;
+    transition: all 0.3s;
+}
+  
+.edit-icon {
+    color: #3498db;
+    cursor: pointer;
+}
+
+button .edit-icon{
+    margin-left: 5em
+}
+
+.main-and-calendar {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.calendar {
+    background-color: var(--color-azul);
+    border-radius: 8px;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    margin-left: 4em;
+    margin-top: 2em;
+}
+  
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+}
+  
+#monthYear {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+#calendarGrid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 1px;
+    background-color: #f0f0f0;
+  }
+  
+.day {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    height: 30px;
+    background-color: #fff;
+    font-family: 'Poppins', sans-serif;
+}
+  
+.day:nth-child(7n) {
+    background-color: #f0f0f0;
+}
+  
+button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.transaction-form {
+    background-color: var(--color-white);
+    border-radius: 8px;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    font-family: 'Poppins', sans-serif;
+    margin-top: -10em;
+    margin-left: 1em;
+}
+  
+.transaction-form h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+}
+  
+.transaction-form div {
+    margin-bottom: 10px;
+}
+  
+.transaction-form label {
+    display: inline-block;
+    width: 60px;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+}
+  
+.transaction-form input,
+.transaction-form select {
+    width: 100%;
+    padding: 8px;
+    border-radius: 10px;
+    border: none;
+    background-color: var(--color-azulescurinho);
+    color: var(--color-white);
+}
+  
+.transaction-form button {
+    margin-top: 10px;
+    background-color: #007bff;
+    color: var(--color-white);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 10em;
+    height: 3em;
+    font-size: smaller;
+    margin-left: 2em;
+    margin: auto;
+}
+  
+.transaction-form button:hover {
+    background-color: #0056b3;
+}
+  
+.selected-date {
+    margin-top: -20em;
+    background-color: var(--color-cinza);
+    border-radius: 10px;
+    width: 13em;
+    height: 3em;
+    margin-left: 4em;
+}
+  
+.selected-date h3 {
+    font-size: small;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    padding-top: 4px;
+}
+
+.selected-date p{
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    font-weight: bolder;
+}
+
+.transactions-list {
+    margin-top: -20em;
+    margin-left: 2em;
+    background-color: var(--color-azulescurinho);
+    border-radius: 10px;
+    padding: 10px;
+}
+  
+.transactions-list h3 {
+    font-size: small;
+    width: 10em;
+    margin-bottom: 10px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.transactions-list ul{
+    color: var(--color-black);
+}
+  
